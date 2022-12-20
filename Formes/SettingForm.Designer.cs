@@ -47,7 +47,7 @@
             this.nameTextBox.BackColor = System.Drawing.Color.White;
             this.nameTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.nameTextBox.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameTextBox.ForeColor = System.Drawing.Color.White;
+            this.nameTextBox.ForeColor = System.Drawing.Color.Black;
             this.nameTextBox.Location = new System.Drawing.Point(162, 6);
             this.nameTextBox.MaxLength = 20;
             this.nameTextBox.Name = "nameTextBox";
@@ -97,7 +97,7 @@
             this.descriptionTextBox.BackColor = System.Drawing.Color.White;
             this.descriptionTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.descriptionTextBox.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.descriptionTextBox.ForeColor = System.Drawing.Color.White;
+            this.descriptionTextBox.ForeColor = System.Drawing.Color.Black;
             this.descriptionTextBox.Location = new System.Drawing.Point(162, 0);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";

@@ -35,6 +35,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.countNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.priceNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.countNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceNumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -130,12 +132,38 @@
             0,
             0});
             // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Люкс",
+            "Полулюкс",
+            "Обычный"});
+            this.comboBox1.Location = new System.Drawing.Point(16, 166);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(120, 24);
+            this.comboBox1.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(16, 147);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 16);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Тип комнаты";
+            // 
             // AddNewRoomForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(445, 261);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.priceNumericUpDown);
             this.Controls.Add(this.countNumericUpDown);
             this.Controls.Add(this.label2);
@@ -166,5 +194,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown countNumericUpDown;
         private System.Windows.Forms.NumericUpDown priceNumericUpDown;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -19,7 +19,7 @@ namespace Hotel.Formes
         {
             InitializeComponent();
             this.place = place;
-            infoLabel.Text = $"Количество спальных мест : {place.CountOfPlaces} \nЦена: {place.Price}";
+            infoLabel.Text = $"Количество спальных мест : {place.CountOfPlaces} \nЦена: {place.Price}\nТип комнаты:{place.Type}";
             
         }       
         private void SelectBtn_Click(object sender, EventArgs e)

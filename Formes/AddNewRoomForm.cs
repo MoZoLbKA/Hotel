@@ -19,14 +19,23 @@ namespace Hotel.Formes
         {
             InitializeComponent();
             this.hotel = hotel;
+            
         }
 
         private void addBtn_Click(object sender, EventArgs e)
         {
+            
             string inputName = nameTextBox.Text;
             decimal price = priceNumericUpDown.Value;
             int count = (int)countNumericUpDown.Value;
-            room = new Room(hotel.GetNextRoomId(), inputName, null, price, DateTime.Now.ToString(), count);
+            if (comboBox1.SelectedIndex == -1)
+            {
+                MessageBox.Show("Укажите тип комнаты", "Предупреждение");
+                DialogResult = DialogResult.Cancel;
+                return;
+            }
+            Type type = (Type)comboBox1.SelectedIndex;
+            room = new Room(hotel.GetNextRoomId(), inputName, null, price, DateTime.Now.ToString(), count,type);
             Close();
         }
 

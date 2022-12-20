@@ -23,8 +23,10 @@ namespace Hotel.Formes
                 fireBtn.Visible = fireBtn.Enabled = false;
             }
             nameTextBox.Text = place.Name;
+            comboBox1.SelectedIndex = (int)place.Type;
             priceUpDown.Value = place.Price;
             scheduleTextBox.Text = place.DateOfVisiting;
+            countNumericUpDown.Value = place.CountOfPlaces;
         }
         public static void EditRoomInfo(Room place)
         {
@@ -36,11 +38,13 @@ namespace Hotel.Formes
 
                 connection.Open();
                 SQLiteCommand command = new SQLiteCommand(connection);
-                command.CommandText = @"UPDATE Rooms SET Name=@Name,Price=@price,LastVisiting=@lastVisiting WHERE Id=@Id";
+                command.CommandText = @"UPDATE Rooms SET Name=@Name,Price=@price,LastVisiting=@lastVisiting,Count = @count,Type=@type WHERE Id=@Id";
                 command.Parameters.Add("@Id", DbType.Int32).Value = place.Id;
                 command.Parameters.Add("@Name", DbType.String).Value = place.Name;
                 command.Parameters.Add("@price", DbType.Decimal).Value = place.Price;
                 command.Parameters.Add("@lastVisiting", DbType.String).Value = place.DateOfVisiting;
+                command.Parameters.Add("@count", DbType.Int32).Value = place.CountOfPlaces;
+                command.Parameters.Add("@type", DbType.Int32).Value = (int)place.Type;
                 command.ExecuteNonQuery();
                 connection.Close();
             }
@@ -50,6 +54,8 @@ namespace Hotel.Formes
             place.Name = nameTextBox.Text;
             place.Price = priceUpDown.Value;
             place.DateOfVisiting = scheduleTextBox.Text;
+            place.Type = (Type)comboBox1.SelectedIndex;
+            place.CountOfPlaces = (int)countNumericUpDown.Value;
             EditRoomInfo(place);
             Close();
         }

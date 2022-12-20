@@ -35,7 +35,7 @@ namespace Hotel.Formes
             else
             {
                 button.Text = nameTextBox.Text.Replace('\n', ' ').ToUpper();
-                using (SQLiteConnection connection = new SQLiteConnection("Data Source = CompanyBase.db;Version=3;"))
+                using (SQLiteConnection connection = new SQLiteConnection("Data Source = Hotel.db;Version=3;"))
                 {
                     connection.Open();
                     SQLiteCommand command = new SQLiteCommand(connection);                    

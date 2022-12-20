@@ -92,6 +92,7 @@ namespace Hotel
                             string lastVisiting = reader[4].ToString();
                             int visitorId;
                             int count = int.Parse(reader[6].ToString());
+                            Type type = (Type)int.Parse(reader[7].ToString());
                             
                             if (int.TryParse(reader[5].ToString(),out visitorId))
                             {
@@ -103,7 +104,7 @@ namespace Hotel
                                         {
                                             if(item.Id == visitorId)
                                             {
-                                                Floor.AddRoom(new Room(id, name, item, price, lastVisiting,count)); //
+                                                Floor.AddRoom(new Room(id, name, item, price, lastVisiting,count,type));
                                                 break;
                                             }
                                         }
@@ -116,7 +117,7 @@ namespace Hotel
                                 {
                                     if (depart.Id == floorId)
                                     {
-                                        depart.AddRoom(new Room(id, name,null, price, lastVisiting,count)); //
+                                        depart.AddRoom(new Room(id, name,null, price, lastVisiting,count,type)); 
                                         break;
                                     }
                                 }

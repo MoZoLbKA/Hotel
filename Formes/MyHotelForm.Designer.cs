@@ -55,18 +55,18 @@
             this.searchPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.searchPanel.Location = new System.Drawing.Point(0, 0);
             this.searchPanel.Name = "searchPanel";
-            this.searchPanel.Size = new System.Drawing.Size(798, 36);
+            this.searchPanel.Size = new System.Drawing.Size(798, 40);
             this.searchPanel.TabIndex = 0;
             // 
             // btnAddNewChapter
             // 
             this.btnAddNewChapter.FlatAppearance.BorderSize = 0;
             this.btnAddNewChapter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNewChapter.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold);
+            this.btnAddNewChapter.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAddNewChapter.ForeColor = System.Drawing.Color.Black;
             this.btnAddNewChapter.Location = new System.Drawing.Point(-1, -1);
             this.btnAddNewChapter.Name = "btnAddNewChapter";
-            this.btnAddNewChapter.Size = new System.Drawing.Size(188, 36);
+            this.btnAddNewChapter.Size = new System.Drawing.Size(239, 39);
             this.btnAddNewChapter.TabIndex = 2;
             this.btnAddNewChapter.Text = "Добавить этаж";
             this.btnAddNewChapter.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@
             this.infoLabel.ForeColor = System.Drawing.Color.Black;
             this.infoLabel.Location = new System.Drawing.Point(350, 0);
             this.infoLabel.Name = "infoLabel";
-            this.infoLabel.Size = new System.Drawing.Size(199, 34);
+            this.infoLabel.Size = new System.Drawing.Size(199, 38);
             this.infoLabel.TabIndex = 1;
             this.infoLabel.Text = "Поиск гостей";
             this.infoLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -97,7 +97,7 @@
             this.findTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.findTextBox.Dock = System.Windows.Forms.DockStyle.Right;
             this.findTextBox.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.findTextBox.ForeColor = System.Drawing.Color.White;
+            this.findTextBox.ForeColor = System.Drawing.Color.Black;
             this.findTextBox.Location = new System.Drawing.Point(549, 0);
             this.findTextBox.Name = "findTextBox";
             this.findTextBox.Size = new System.Drawing.Size(247, 33);
@@ -113,9 +113,9 @@
             this.filtersPanel.Controls.Add(this.experianseCheckBox);
             this.filtersPanel.Controls.Add(this.acceptButton);
             this.filtersPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.filtersPanel.Location = new System.Drawing.Point(0, 36);
+            this.filtersPanel.Location = new System.Drawing.Point(0, 40);
             this.filtersPanel.Name = "filtersPanel";
-            this.filtersPanel.Size = new System.Drawing.Size(188, 414);
+            this.filtersPanel.Size = new System.Drawing.Size(188, 410);
             this.filtersPanel.TabIndex = 1;
             // 
             // NotSorteCheckBox
@@ -176,7 +176,7 @@
             this.acceptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.acceptButton.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.acceptButton.ForeColor = System.Drawing.Color.Black;
-            this.acceptButton.Location = new System.Drawing.Point(0, 362);
+            this.acceptButton.Location = new System.Drawing.Point(0, 358);
             this.acceptButton.Name = "acceptButton";
             this.acceptButton.Size = new System.Drawing.Size(188, 52);
             this.acceptButton.TabIndex = 3;
@@ -191,9 +191,9 @@
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.mainPanel.Location = new System.Drawing.Point(188, 36);
+            this.mainPanel.Location = new System.Drawing.Point(188, 40);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(610, 414);
+            this.mainPanel.Size = new System.Drawing.Size(610, 410);
             this.mainPanel.TabIndex = 2;
             // 
             // MyHotelForm

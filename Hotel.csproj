@@ -96,11 +96,11 @@
     <Compile Include="Formes\FloorForm.Designer.cs">
       <DependentUpon>FloorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formes\EdirRoomForm.cs">
+    <Compile Include="Formes\EditRoomForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formes\EdirRoomForm.Designer.cs">
-      <DependentUpon>EdirRoomForm.cs</DependentUpon>
+    <Compile Include="Formes\EditRoomForm.Designer.cs">
+      <DependentUpon>EditRoomForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Formes\StatisticsForm.cs">
       <SubType>Form</SubType>
@@ -142,8 +142,8 @@
     <EmbeddedResource Include="Formes\FloorForm.resx">
       <DependentUpon>FloorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formes\EdirRoomForm.resx">
-      <DependentUpon>EdirRoomForm.cs</DependentUpon>
+    <EmbeddedResource Include="Formes\EditRoomForm.resx">
+      <DependentUpon>EditRoomForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formes\StatisticsForm.resx">
       <DependentUpon>StatisticsForm.cs</DependentUpon>

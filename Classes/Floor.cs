@@ -187,7 +187,7 @@ namespace Hotel
                 {
                     connection.Open();
                     SQLiteCommand command = new SQLiteCommand(connection);
-                    command.CommandText = $"Insert into Rooms(Id,Name,FloorId,Price,LastVisiting,VisitorId,Count) values(@id,@Name,@floorId,@price,@lastVisiting,@visitorId,@count)";
+                    command.CommandText = $"Insert into Rooms(Id,Name,FloorId,Price,LastVisiting,VisitorId,Count,Type) values(@id,@Name,@floorId,@price,@lastVisiting,@visitorId,@count,@type)";
                     command.Parameters.Add("Id", DbType.Int32).Value = room.Id;
                     command.Parameters.Add("floorId", DbType.Int32).Value = this.Id;
                     command.Parameters.Add("Name", DbType.String).Value = room.Name;
@@ -195,8 +195,10 @@ namespace Hotel
                     command.Parameters.Add("lastVisiting", DbType.String).Value = lastTimeVisited;
                     command.Parameters.Add("visitorId", DbType.Int32).Value = null;
                     command.Parameters.Add("count", DbType.Int32).Value = room.CountOfPlaces;
+                    command.Parameters.Add("type", DbType.Int32).Value = room.Type;
                     command.ExecuteNonQuery();
                     connection.Close();
+
                 }
                 AddRoom(room);
             }

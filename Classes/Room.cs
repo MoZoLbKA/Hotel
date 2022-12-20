@@ -10,14 +10,38 @@ using System.Data;
 
 namespace Hotel
 {
+    public enum Type
+    {
+        Lux = 0,
+        SemiLux,
+        Default
+    }
     public class Room
     {
         private string name;
         private Visitor holder;
         private decimal price;
         private string dateOfVisiting;
-        public int CountOfPlaces { get; private set; }//
+        private int countOfPlaces; 
+        
 
+        public int CountOfPlaces
+        {
+            get { return countOfPlaces; }
+            set 
+            {
+                if (value > 0)
+                {
+                    countOfPlaces = value;
+                }
+                else
+                {
+                    countOfPlaces = 1;
+                }
+            }
+        }
+
+        public Type Type { get; set; }
         public Floor Floor { get; set; }
         public Panel Panel { get; private set; }
         public  Label infoLabel { get; private set; }
@@ -58,12 +82,12 @@ namespace Hotel
                         nameLabel.BackColor = Color.FromArgb(255, 192, 192);                       
                         nameLabel.Font = new Font("Comic Sans MS", 7);
                         nameLabel.Location = new Point(0, 0);
-                        nameLabel.Size = new Size(140, 23);
+                        nameLabel.Size = new Size(160, 23);
                         nameLabel.Tag = this;
                         nameLabel.DoubleClick += ShowInfo;
                         Panel.Controls.Add(nameLabel);
                     }
-                    nameLabel.Text = value;
+                    nameLabel.Text = $"{value} Цен:{price}/Мест:{CountOfPlaces}/{Type.ToString()[0]}";
                 }
             }
         }
@@ -113,7 +137,6 @@ namespace Hotel
                     button.Location = new Point(0, 23);
                     button.Size = new Size(220, 95);
                     button.Font = new Font("Comic Sans MS", 16);
-                    
                     button.Text = "Добавить гостя";
                     button.IconChar = IconChar.PlusCircle;
                     button.IconColor = Color.Black;
@@ -235,14 +258,15 @@ namespace Hotel
             }
         }
         
-        public Room(int Id, string Name, Visitor Holder, decimal price, string lastVisiting,int count)
+        public Room(int Id, string Name, Visitor Holder, decimal price, string lastVisiting,int count,Type type)
         {
             this.Id = Id;
-            this.Name = Name;
             this.Holder = Holder;
             this.Price = price;
             this.DateOfVisiting = lastVisiting;
             CountOfPlaces = count;
+            Type = type;
+            this.Name = Name;
         }
         private static void ShowInfo(object sender, EventArgs e)
         {

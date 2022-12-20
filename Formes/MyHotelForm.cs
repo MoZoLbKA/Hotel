@@ -28,7 +28,7 @@ namespace Hotel
                     {
                         if (worker.infoLabel != null)
                         {
-                            worker.ChangeColorForControl(worker.infoLabel, Color.FromArgb(53, 0, 211));
+                            worker.ChangeColorForControl(worker.infoLabel, Color.FromArgb(255, 192, 192));
                         }
                     }
                 }
@@ -55,7 +55,7 @@ namespace Hotel
                             }
                             else
                             {
-                                worker.ChangeColorForControl(worker.infoLabel, Color.FromArgb(53, 0, 211));
+                                worker.ChangeColorForControl(worker.infoLabel, Color.FromArgb(255, 192, 192));
                             }
                         }
                     }
